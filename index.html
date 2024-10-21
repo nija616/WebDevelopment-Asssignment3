@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniHealth - Home</title>
+    <style>
+      body {
+        background-color: #dff2fe; 
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      header {
+        background-color: #99c7f4;
+        padding: 15px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+
+      nav ul li a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      .login-signup {
+        background-color: #70b7ed; 
+        padding: 8px 15px;
+        border-radius: 5px;
+      }
+
+      .login-signup:hover {
+        background-color: #1a8bbf; 
+      }
+
+      main {
+        padding: 30px;
+      }
+
+      .help-section {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #aaccef; 
+        border-radius: 10px;
+        margin-bottom: 30px;
+      }
+
+      .text-content {
+        flex: 1;
+        padding-right: 20px;
+      }
+
+      .text-content h2 {
+        color: #333;
+        font-size: 1.8em;
+      }
+
+      .text-content select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #e5e5e5; 
+        border-radius: 5px;
+        background-color: #fafafa; 
+      }
+
+      .go-button {
+        background-color: #70b7ed; 
+        color: #333;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .go-button:hover {
+        background-color: #1a8bbf; 
+      }
+
+      .image-placeholder {
+        width: 40%;
+        height: 200px;
+        background-color: #e5e5e5; 
+        border-radius: 10px;
+      }
+
+      .offer-section {
+        padding: 20px;
+        background-color: #aaccef; 
+        border-radius: 10px;
+      }
+
+      .offer-section h3 {
+        color: #333;
+        font-size: 1.5em;
+      }
+      
+      .image-content {
+        width: 25%;
+        height: auto;
+        border-radius: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Get Started</a></li>
+          <li><a href="#" onclick="showUnderDevelopment()">Learn More</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#" onclick="showUnderDevelopment()">Blogs</a></li>
+          <li class="logo">UniHealth</li>
+          <li><a href="#" onclick="showUnderDevelopment()">Programs</a></li>
+          <li><a href="referral.html">Refer a Patient</a></li>
+          <li><a href="loginpage.html" class="login-signup">Login/Signup</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="help-section">
+        <div class="text-content">
+          <h2>How can we help you?</h2>
+          <p>
+            At UniHealth, we're here to support you on your journey to better mental health. Whether you're seeking guidance, resources, or a listening ear, we're ready to help. 
+          </p>
+          <label for="help-select">What help do you need?</label>
+          <select id="help-select">
+            <option value="">I would like to...</option>
+            <option value="learn">Learn about programs</option>
+            <option value="contact">Contact support</option>
+            <option value="schedule">Schedule a session</option>
+          </select>
+          <button class="go-button">Go</button>
+        </div>
+        <img src="health.png" alt="Image" class="image-content" />
+        </div>
+      </section>
+
+      <section class="offer-section">
+        <h3>WHAT WE OFFER</h3> 
+        <p>
+          UniHealth offers a variety of mental health and wellness programs tailored to meet your needs. Our services are designed to provide compassionate care and practical tools for managing life's challenges.
+        </p>
+        <h4>Mindfullness Programs</h4>
+        <p>Discover techniques to help you stay present and reduce stress. Our mindfulness programs guide you through practices like meditation, breathing exercises, and self-awareness techniques.</p>
+        <img src="mindfullness.webp" alt="counselling" class="image-content" />
+       <h4>Counselling Services</h4>
+       <p>Whether you're facing a tough time or just need someone to talk to, our licensed professionals are here to offer supportive and confidential counseling. We focus on listening, understanding, and helping you find clarity.</p>
+        <img src="counselling.png" alt="counselling" class="image-content" />
+        <h4>Community Support</h4>
+        <p>Connect with others through support groups, peer discussions, and wellness workshops. You're not alone on this journey—our community is here to uplift and empower you.        </p>
+        <img src="communitysupp.png" alt="counselling" class="image-content" />
+        </div>
+      </section>
+    </main>
+    <script>
+      function showUnderDevelopment() {
+        alert(
+          "This page is currently under development. Please check back later."
+        );
+      }
+    </script>
+  </body>
+</html>

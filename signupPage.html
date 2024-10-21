@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniHealth - Sign Up</title>
+    <style>
+      body {
+        background-color: #b0d8f1; 
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .signup-container {
+        background-color: #c4dcf5; 
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 350px;
+      }
+
+      .signup-container h2 {
+        font-size: 1.8em;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .signup-container p {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      form input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #e5e5e5; 
+        border-radius: 5px;
+        background-color: #f9f9f9; 
+        font-size: 1em;
+      }
+
+      form button {
+        width: 100%;
+        padding: 10px;
+        background-color: #70b7ed; 
+        color: #333;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      form button:hover {
+        background-color: #1a8bbf; 
+      }
+
+      .redirect-text {
+        margin-top: 15px;
+      }
+
+      .redirect-text a {
+        color: #1a8bbf; 
+        text-decoration: none;
+      }
+
+      .redirect-text a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signup-container">
+      <h2>UniHealth</h2>
+      <p>Welcome to UniHealth!</p>
+      <form id="signupForm" action="#" method="post">
+        <input type="text" placeholder="Enter your Username" required />
+        <input type="email" placeholder="Enter your email" required />
+        <input type="password" placeholder="Enter your password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+      <p class="redirect-text">Already Registered? <a href="loginpage.html">Sign In</a></p>
+    </div>
+
+    <script>
+      document.getElementById('signupForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        
+        console.log('Form submitted successfully.');
+
+        // Redirect to homepage
+        window.location.href = 'index.html'; 
+      });
+    </script>
+  </body>
+</html>

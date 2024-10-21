@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniHealth - FAQ</title>
+    <style>
+      body {
+        background-color: #b8d5e8; 
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #99c7f4; 
+        padding: 15px ;
+        text-align: center;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin: 0 10px;
+      }
+
+      nav a {
+        color: #000000;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .faq-container {
+        text-align: center;
+        padding: 50px;
+        background-color: #dff2fe; 
+      }
+
+      .faq-container h1 {
+        color: #333;
+      }
+
+      .faq-section {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      .faq {
+        background-color: #ffffff; 
+        margin: 15px 0;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .faq-question p {
+        margin: 0;
+        font-size: 1.1em;
+        color: #333;
+      }
+
+      .arrow {
+        font-size: 1.2em;
+        color: #1a8bbf;
+        transition: transform 0.3s ease;
+      }
+
+      .faq-answer {
+        display: none;
+        padding-top: 10px;
+        color: #333;
+        font-size: 0.95em;
+      }
+
+      .active .arrow {
+        transform: rotate(180deg);
+      }
+
+      .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+      }
+
+      .login-signup {
+        background-color: #70b7ed; 
+        padding: 8px 15px;
+        border-radius: 5px;
+      }
+
+      .login-signup:hover {
+        background-color: #1a8bbf; 
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Get Started</a></li>
+          <li><a href="#" onclick="showUnderDevelopment()">Learn More</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#" onclick="showUnderDevelopment()">Blogs</a></li>
+          <li class="logo">UniHealth</li>
+          <li><a href="#" onclick="showUnderDevelopment()">Programs</a></li>
+          <li><a href="referral.html">Refer a Patient</a></li>
+          <li><a href="loginpage.html" class="login-signup">Login/Signup</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="faq-container">
+      <h1>Frequently Asked Questions</h1>
+      <p>Get answers to your questions</p>
+      <div class="faq-section">
+        <div class="faq">
+          <div class="faq-question">
+            <p>How do I get started with using the platform?</p>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              To get started, sign up for an account and complete your
+              profile...
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-question">
+            <p>How does the mental health assessment process work?</p>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              The assessment process involves answering a series of questions...
+            </p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-question">
+            <p>What type of support can I expect from the platform?</p>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="faq-answer">
+            <p>You can expect professional, compassionate support...</p>
+          </div>
+        </div>
+        <div class="faq">
+          <div class="faq-question">
+            <p>How much does everything cost?</p>
+            <span class="arrow">&#9660;</span>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Our programs vary in cost. Please refer to our Programs page for
+              details...
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      //question 
+      document.querySelectorAll(".faq-question").forEach((item) => {
+        item.addEventListener("click", () => {
+          const answer = item.nextElementSibling;
+          const arrow = item.querySelector(".arrow");
+
+         //answer
+          if (answer.style.display === "block") {
+            answer.style.display = "none";
+          } else {
+            answer.style.display = "block";
+          }
+
+          // dropdown arrow
+          arrow.classList.toggle("active");
+        });
+      });
+
+      function showUnderDevelopment() {
+        alert(
+          "This page is currently under development. Please check back later."
+        );
+      }
+    </script>
+  </body>
+</html>

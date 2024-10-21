@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniHealth Login</title>
+    <style>
+      body {
+        background-color: #b0d8f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+      }
+
+      .login-container {
+        background-color: #c4dcf5;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+      }
+
+      h2 {
+        margin-bottom: 15px;
+        color: #333; 
+      }
+
+      p {
+        margin: 5px 0;
+        color: #333;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        width: 90%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #e5e5e5; 
+        border-radius: 5px;
+        outline: none;
+        background-color: #f9f9f9; 
+      }
+
+      input[type="email"]:focus,
+      input[type="password"]:focus {
+        border-color: #1a8bbf; 
+      }
+
+      button {
+        width: 95%;
+        padding: 10px;
+        background-color: #70b7ed; 
+        color: #333;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #1a8bbf; 
+      }
+
+      .forgot-password,
+      .register-link a {
+        display: block;
+        margin: 10px 0;
+        color: #333;
+        text-decoration: none;
+        font-size: 0.9em;
+      }
+
+      .forgot-password:hover,
+      .register-link a:hover {
+        text-decoration: underline;
+        color: #1a8bbf; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>UniHealth</h2>
+      <p>Welcome Back,</p>
+      <p>Please Sign into your account</p>
+      <form id="loginForm">
+        <input type="email" placeholder="Enter your email" required />
+        <input type="password" placeholder="Enter your password" required />
+        <a href="#" class="forgot-password">Forgot Password?</a>
+        <button type="submit">Sign In</button>
+      </form>
+      <p class="register-link">Not Registered?</p> 
+      <a href="signupPage.html">Register Here</a>
+    </div>
+
+    <script>
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        
+        window.location.href = 'index.html'; 
+      });
+    </script>
+    
+  </body>
+</html>
